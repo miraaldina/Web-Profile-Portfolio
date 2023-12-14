@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mira Aldina</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <div class="navigation">
+        <ul>
+                <li class="list active">
+                <a href="index.html">
+                    <span class="icon-profile">
+                        <ion-icon name="person-sharp"></ion-icon>
+                    </span>
+                </a>
+                <li class="list Home">
+                    <a href="home.html">
+                        <span class="icon-home">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li class="list Me">
+                    <a href="me.html">
+                        <span class="icon-me">
+                            <ion-icon name="logo-medium"></ion-icon>
+                        </span>
+                        <span class="text">Me</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+        </ul>
+    </div> 
+    
+    <img src="poto/Untitled-1.png" alt="">
+
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="tel:085764183130">
+                        <ion-icon name="call"></ion-icon>
+                        <span>085764183130</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/username" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/username" target="_blank">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>Universitas Islam Nusantara ~ Fakultas Teknik, Prodi Teknik Informatika</p>
+    </footer>
+
+    <div class="additional-info">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>Mira Aldina</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td>Palembang</td>
+            </tr>
+            <tr>
+                <td>Pendidikan</td>
+                <td>:</td>
+                <td>Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td>TTL</td>
+                <td>:</td>
+                <td>Palembang, 09 Januari 2004</td>
+            </tr>
+        </table>
+    </div>
+    
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink))
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
