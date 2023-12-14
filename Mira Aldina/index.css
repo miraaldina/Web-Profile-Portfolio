@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 800;
+    padding: 800;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --crl: #fffbfb;
+    --orange: #FFA500;
+    /* Warna oranye yang ditambahkan */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--crl) url('poto/profil.jpeg') center/cover no-repeat;
+}
+
+img {
+    float: left;
+    margin-top: 3px;
+    /* Kurangi margin-top sesuai keinginan Anda */
+    margin-right: 250px;
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.navigation {
+    position: fixed;
+    top: 6%;
+    width: 100%;
+    height: 80px;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 50px;
+    z-index: 60;
+}
+
+.navigation ul {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navigation ul li a .icon-profile {
+    position: relative;
+    bottom: 40px;
+    display: block;
+    line-height: 70px;
+    font-size: 2em;
+    text-align: center;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.navigation ul li a .icon-home {
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 2em;
+    text-align: center;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.navigation ul li a .icon-me {
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 2em;
+    text-align: center;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.navigation ul li a:hover .icon {
+    color: var(--orange);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-40px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.10em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active .text {
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 76px;
+    height: 76px;
+    background: #000000;
+    border-radius: 90%;
+    border: 9px solid var(--crl);
+    transition: 0.20s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -27px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 10px;
+    box-shadow: 20px -100px 0 0 var(--crl);
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-left-radius: 90px;
+    box-shadow: -2000px -100px 0 0 var(--crl);
+}
+
+.medsos {
+    position: absolute;
+    right: 6%;
+    background-color: rgba(192, 192, 192, 0.5);
+    /* Warna abu muda dengan tingkat transparansi */
+    padding: 15px;
+    /* Ruang di sekitar konten */
+    border-radius: 10px;
+    /* Sudut elemen dengan border-radius */
+}
+
+.medsos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.medsos li {
+    margin-bottom: 20%;
+    /* Jarak antara setiap elemen medsos */
+}
+
+.medsos a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    /* Warna teks */
+}
+
+.medsos ion-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    /* Jarak antara ikon dan teks */
+}
+
+.medsos a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Efek hover untuk latar belakang */
+}
+
+.medsos a[href*="instagram"] ion-icon {
+    color: #f072b1;
+    /* Warna pink */
+}
+
+.medsos a[href*="facebook"] ion-icon {
+    color: #1877f2;
+    /* Warna biru */
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * -0.04));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 7.19));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 14.45));
+}
+
+footer {
+    font-size: 20px;
+    background-color: #000000;
+    /* Warna latar belakang footer */
+    color: #f0b76c;
+    /* Warna teks di footer */
+    text-shadow: 0 0 5px rgba(255, 254, 254, 0.932); 
+    padding: 8px;
+    /* Ruang di sekitar konten footer */
+    text-align: center;
+    /* Posisi teks dalam footer */
+    position: fixed;
+    /* Mengatur footer tetap di bagian bawah layar */
+    bottom: 0;
+    /* Memastikan footer berada di bagian bawah */
+    height: 11%;
+    width: 100%;
+    /* Lebar footer sesuai dengan layar */
+    border-radius: 90px;
+}
+.additional-info {
+    position: absolute;
+    top: 300px; /* Sesuaikan dengan jarak dari atas */
+    left: 30.5%; /* Sesuaikan dengan jarak dari kiri */
+    color: #f8e1b6; /* Warna orange */
+    margin-top: -50px; /* Sesuaikan dengan tinggi tulisan */
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(255, 252, 252, 0.932); /* Tumpukan warna putih dengan efek bayangan */
+}
+
+.additional-info table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(7, 5, 3, 0); /* Warna latar belakang sepenuhnya transparan */
+}
+
+.additional-info td {
+    padding: 8px;
+    text-align: left;
+}
+
+.additional-info td:first-child {
+    width: 120px;
+    font-weight: bold;
+}
+
+.additional-info td:nth-child(2) {
+    width: 20px;
+    text-align: center;
+}
+
+.additional-info td:last-child {
+    padding-left: 10px;
+}

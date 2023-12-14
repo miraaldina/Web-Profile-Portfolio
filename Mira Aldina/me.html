@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mira Aldina</title>
+    <link rel="stylesheet" type="text/css" href="me.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+                <li class="list active">
+                <a href="index.html">
+                    <span class="icon-profile">
+                        <ion-icon name="person-sharp"></ion-icon>
+                    </span>
+                </a>
+                <li class="list Home">
+                    <a href="home.html">
+                        <span class="icon-home">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                        <div class="text">Home</div>
+                    </a>
+                </li>
+                <li class="list Me">
+                    <a href="me.html">
+                        <span class="icon-me">
+                            <ion-icon name="logo-medium"></ion-icon>
+                        </span>
+                        <span class="text">Me</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+        </ul>
+    </div> 
+    <div class="about-me">
+        <h2>Tentang Saya</h2>
+    </div>
+
+    <div class="about">
+        <p>Saya adalah mahasiswa universitas islam nusantara yang sedang mempelajari ilmu di bidang komputer, tepatnya yaitu adalah teknik informatika. 
+           saya tertarik mempelajari teknik informatika karena saya ingin mendapatkanilmu dan wawasan baru khususnya ilmu dalam komputer.</p>
+    </div>
+
+    <footer>
+        <p>Universitas Islam Nusantara ~ Fakultas Teknik, Prodi Teknik Informatika</p>
+    </footer>
+
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink))
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
